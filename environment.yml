@@ -1,0 +1,18 @@
+# Conda environment used for ALL BFI analyses (calculation + summary statistics
+# + figure generation ran in this single Python 3.13 environment).
+# Reproduce with:  conda env create -f environment.yml && conda activate bfi
+# External tools (not pip-installable): PLINK v1.90b7.2, PLINK v2.00a5.12LM.
+name: bfi
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.13.12
+  - numpy=2.4.4
+  - pandas=2.3.3
+  - scipy=1.17.1
+  - matplotlib-base=3.10.8
+  - openpyxl=3.1.5
+  - pip
+# A fully pinned pip freeze of the exact working environment is in
+# requirements-lock.txt (209 packages).

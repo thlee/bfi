@@ -2,12 +2,16 @@
 
 A quantitative metric for genomic design space in crop breeding.
 
-BFI measures an individual accession's potential to disrupt excess LD blocks when used as a crossing parent. It weights each LD block by its excess LD above the drift–recombination equilibrium baseline (Hill, 1981), enabling cross-species comparison without requiring wild-type reference samples.
+BFI measures an individual accession's potential to disrupt excess LD blocks when used as a crossing parent. It weights each LD block by its excess LD above the drift–recombination equilibrium baseline (Hill, 1981), without requiring wild-type reference samples.
 
 ## Installation
 
+Install from source (the name `bfi` on PyPI belongs to an unrelated package, so
+this tool is distributed via GitHub / Zenodo, not `pip install bfi`):
+
 ```bash
-pip install bfi
+pip install git+https://github.com/thlee/bfi.git
+# or, for a pinned/citable version, download the release archived on Zenodo (DOI: TBD)
 ```
 
 **Requirement:** [PLINK 1.9](https://www.cog-genomics.org/plink/) must be installed and accessible.
@@ -49,7 +53,7 @@ print(result.head())
 
 | Parameter | Description | Typical values |
 |-----------|-------------|----------------|
-| `ne` | Effective population size | Rice indica: 911, Soybean improved: 813 |
+| `ne` | Effective population size | Rice indica: 911, Soybean improved: 1263 |
 | `recomb_rate` | Per-bp recombination rate | Rice: 4e-8, Soybean: 2.5e-8, Maize: 1e-8 |
 | `blocks_max_kb` | Max LD block size (kb) | 200 (robust to 50–500) |
 | `blocks_min_maf` | Min MAF for block SNPs | 0.05 |
@@ -70,9 +74,11 @@ r²_eq = 1 / (1 + 4·N_e·c)        ← Hill (1981) equilibrium
 ## Citation
 
 ```
-Lee, T.-H. (2026). Breeding Freedom Index: A Quantitative Metric for
-Genomic Design Space in Crop Breeding.
+Kim, M., Lee, K., Hwang, J.-H., Kim, K.D., & Lee, T.-H. (2026).
+Breeding Freedom Index: A Quantitative Metric for Genomic Design Space
+in Crop Breeding.
 ```
+(Author order and journal to be finalized to match the published article.)
 
 ## License
 
