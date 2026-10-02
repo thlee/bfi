@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bfi"
-version = "1.0.1"
+version = "1.0.2"
 description = "Breeding Freedom Index — genomic design space metric for crop breeding"
 readme = "README.md"
 license = {text = "MIT"}
@@ -12,8 +12,8 @@ requires-python = ">=3.9"
 authors = [
     {name = "Minwoo Kim"},
     {name = "Keunpyo Lee"},
-    {name = "Ji-Hun Hwang"},
     {name = "Kyung Do Kim"},
+    {name = "Ji-Hun Hwang"},
     {name = "Tae-Ho Lee", email = "thlee0@korea.kr"},
 ]
 keywords = ["breeding", "genomics", "linkage-disequilibrium", "crop-breeding", "BFI"]
